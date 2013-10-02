@@ -37,6 +37,6 @@ build do
   end
   command "mkdir #{install_dir}/etc"
   %w{redis.conf sentinel.conf}.each do |config|
-    command "cp #{config} #{install_dir}/etc/redis.conf.dist"
+    command "cp #{config} #{install_dir}/etc/#{config}.dist"
   end
 end
