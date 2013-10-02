@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# Perform necessary redis removal steps
+# after package is uninstalled.
+#
+
+echo "redis has been uninstalled!"
+
+exit 0

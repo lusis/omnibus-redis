@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+# Perform necessary redis setup steps
+# after package is installed.
+#
+
+PROGNAME=$(basename $0)
+
+function error_exit
+{
+  echo "${PROGNAME}: ${1:-"Unknown Error"}" 1>&2
+  exit 1
+}
+
+chown -R root:root /opt/redis || error_exit "Failed to change perms after install"
+exit 0
